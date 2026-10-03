@@ -5,7 +5,7 @@ Projeto da disciplina **Desenvolvimento Web I** — Tecnólogo em Redes de Compu
 Aplicação Web estática (somente HTML e CSS) para uma Central de Serviços de Rede, com três páginas baseadas nos wireframes da atividade.
 
 - **Repositório:** `dw1-n1-central-servicos-rede`
-- **GitHub Pages:** __
+- **GitHub Pages:** [__](https://github.com/patinhocodador99/dw1-n1-central-servicos-rede-sthefanie.git)
 
 ## Páginas
 
