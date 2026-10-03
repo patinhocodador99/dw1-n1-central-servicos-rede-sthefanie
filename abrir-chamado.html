@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abrir chamado | Central de Serviços de Rede</title>
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/global.css">
+    <link rel="stylesheet" href="./assets/css/abrir-chamado.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="container cabecalho-conteudo">
+            <div>
+                <h1>Central de Chamados</h1>
+                <p class="descricao">Registro e acompanhamento de solicitações técnicas</p>
+            </div>
+
+            <nav class="menu" aria-label="Navegação principal">
+                <ul>
+                    <li><a href="./index.html">Início</a></li>
+                    <li><a href="./chamados.html">Chamados</a></li>
+                    <li><a href="./abrir-chamado.html" aria-current="page">Abrir chamado</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="introducao-formulario">
+            <p class="rotulo">Abertura de solicitação</p>
+            <h2>Abrir novo chamado</h2>
+            <p>Os campos marcados com <span class="obrigatorio">*</span> são obrigatórios.</p>
+        </section>
+
+        <form class="formulario-chamado" action="#" method="post" enctype="multipart/form-data">
+            <fieldset class="grupo">
+                <legend>1. Dados do solicitante</legend>
+
+                <div class="linha-campos">
+                    <div class="campo">
+                        <label for="nome">Nome completo <span class="obrigatorio">*</span></label>
+                        <input type="text" id="nome" name="nome" minlength="3" maxlength="80"
+                               autocomplete="name" placeholder="Seu nome" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="email">E-mail <span class="obrigatorio">*</span></label>
+                        <input type="email" id="email" name="email" maxlength="100"
+                               autocomplete="email" placeholder="nome@exemplo.com" required>
+                    </div>
+                </div>
+
+                <div class="linha-campos">
+                    <div class="campo">
+                        <label for="telefone">Telefone</label>
+                        <input type="tel" id="telefone" name="telefone" maxlength="20"
+                               autocomplete="tel" placeholder="(00) 00000-0000">
+                    </div>
+
+                    <div class="campo">
+                        <label for="data-hora">Data e hora da ocorrência <span class="obrigatorio">*</span></label>
+                        <input type="datetime-local" id="data-hora" name="data-hora" required>
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset class="grupo">
+                <legend>2. Informações do chamado</legend>
+
+                <div class="linha-campos">
+                    <div class="campo">
+                        <label for="categoria">Categoria <span class="obrigatorio">*</span></label>
+                        <select id="categoria" name="categoria" required>
+                            <option value="">Selecione</option>
+                            <option value="configuracao">Configuração de redes</option>
+                            <option value="suporte">Suporte básico</option>
+                            <option value="seguranca">Segurança</option>
+                            <option value="monitoramento">Monitoramento</option>
+                        </select>
+                    </div>
+
+                    <div class="campo">
+                        <label for="prioridade">Prioridade <span class="obrigatorio">*</span></label>
+                        <select id="prioridade" name="prioridade" required>
+                            <option value="">Selecione</option>
+                            <option value="baixa">Baixa</option>
+                            <option value="media">Média</option>
+                            <option value="alta">Alta</option>
+                        </select>
+                    </div>
+
+                    <div class="campo">
+                        <label for="anexo">Arquivo (opcional)</label>
+                        <input type="file" id="anexo" name="anexo" accept=".png,.jpg,.jpeg,.pdf">
+                    </div>
+                </div>
+
+                <div class="linha-campos">
+                    <div class="campo">
+                        <label for="descricao">Descrição do problema <span class="obrigatorio">*</span></label>
+                        <textarea id="descricao" name="descricao" rows="6" minlength="10"
+                                  maxlength="500" placeholder="Descreva o que está acontecendo"
+                                  required></textarea>
+                    </div>
+
+                    <div class="campo">
+                        <span id="rotulo-afetados">Equipamentos ou serviços afetados</span>
+                        <div class="opcoes" role="group" aria-labelledby="rotulo-afetados">
+                            <label class="opcao" for="afetado-computador">
+                                <input type="checkbox" id="afetado-computador" name="afetados" value="computador">
+                                Computador
+                            </label>
+                            <label class="opcao" for="afetado-impressora">
+                                <input type="checkbox" id="afetado-impressora" name="afetados" value="impressora">
+                                Impressora
+                            </label>
+                            <label class="opcao" for="afetado-rede">
+                                <input type="checkbox" id="afetado-rede" name="afetados" value="rede">
+                                Rede
+                            </label>
+                            <label class="opcao" for="afetado-internet">
+                                <input type="checkbox" id="afetado-internet" name="afetados" value="internet">
+                                Internet
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+
+            <div class="confirmacao">
+                <label class="opcao" for="confirmacao">
+                    <input type="checkbox" id="confirmacao" name="confirmacao" value="sim" required>
+                    Confirmo que as informações fornecidas estão corretas. <span class="obrigatorio">*</span>
+                </label>
+            </div>
+
+            <div class="acoes-formulario">
+                <button type="reset" class="botao botao-secundario">Limpar</button>
+                <button type="submit" class="botao">Enviar</button>
+            </div>
+        </form>
+    </main>
+
+    <footer class="rodape">
+        <div class="container">
+            <p>Desenvolvimento Web I • Tecnólogo em Redes de Computadores - IFC cmapus Araquari</p>
+        </div>
+    </footer>
+</body>
+</html>

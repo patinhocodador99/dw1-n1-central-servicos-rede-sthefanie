@@ -1,0 +1,116 @@
+.apresentacao {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    padding: 2rem;
+    background-color: var(--laranja-claro);
+    border: 1px solid var(--cinza-300);
+    border-left: 6px solid var(--laranja);
+    border-radius: 0.75rem;
+    margin-bottom: 2.5rem;
+}
+
+.apresentacao-texto {
+    flex: 1 1 320px;
+}
+
+.apresentacao .rotulo {
+    color: var(--laranja-escuro);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.apresentacao h2 {
+    font-size: 2rem;
+    line-height: 1.2;
+    margin: 0.25rem 0 0.5rem;
+}
+
+.apresentacao p {
+    color: var(--cinza-700);
+}
+
+.servicos h2 {
+    margin-bottom: 1.25rem;
+}
+
+.lista-servicos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.cartao-servico {
+    flex: 1 1 240px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background-color: var(--branco);
+    border: 1px solid var(--cinza-300);
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.cartao-servico img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    background-color: var(--cinza-100);
+}
+
+.conteudo-cartao {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 0.5rem;
+    padding: 1.25rem;
+}
+
+.categoria {
+    align-self: flex-start;
+    padding: 0.15rem 0.6rem;
+    border-radius: 999px;
+    background-color: var(--laranja-claro);
+    color: var(--laranja-escuro);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.conteudo-cartao h3 {
+    font-size: 1.2rem;
+}
+
+.conteudo-cartao p {
+    color: var(--cinza-700);
+    font-size: 0.95rem;
+}
+
+.link-chamado {
+    margin-top: auto;
+    padding-top: 0.5rem;
+    color: var(--laranja-escuro);
+    font-weight: 700;
+}
+
+.link-chamado:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+    .apresentacao {
+        padding: 1.25rem;
+    }
+
+    .apresentacao h2 {
+        font-size: 1.5rem;
+    }
+
+    .apresentacao .botao {
+        width: 100%;
+    }
+}

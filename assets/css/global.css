@@ -1,0 +1,153 @@
+:root {
+    --laranja: #e8710a;
+    --laranja-escuro: #b85600;
+    --laranja-claro: #fff1e2;
+    --cinza-900: #2b2f36;
+    --cinza-700: #4a505a;
+    --cinza-500: #8a909a;
+    --cinza-300: #d5d8dd;
+    --cinza-100: #f3f4f6;
+    --branco: #ffffff;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--cinza-900);
+    background-color: var(--cinza-100);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.cabecalho {
+    background-color: var(--cinza-900);
+    color: var(--branco);
+    border-bottom: 4px solid var(--laranja);
+}
+
+.cabecalho-conteudo {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1.25rem 0;
+}
+
+.cabecalho h1 {
+    font-size: 1.5rem;
+    line-height: 1.2;
+}
+
+.cabecalho .descricao {
+    color: var(--cinza-300);
+    font-size: 0.95rem;
+}
+
+.menu ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.menu a {
+    display: block;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--cinza-500);
+    border-radius: 0.5rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.menu a:hover {
+    background-color: var(--cinza-700);
+}
+
+.menu a[aria-current="page"] {
+    background-color: var(--laranja);
+    border-color: var(--laranja);
+    color: var(--branco);
+}
+
+main {
+    padding: 2rem 0;
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: var(--cinza-900);
+    margin-bottom: 0.5rem;
+}
+
+.botao {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border: 2px solid var(--laranja);
+    border-radius: 0.5rem;
+    background-color: var(--laranja);
+    color: var(--branco);
+    font-weight: 700;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.2s;
+}
+
+.botao:hover {
+    background-color: var(--laranja-escuro);
+    border-color: var(--laranja-escuro);
+}
+
+.botao-secundario {
+    background-color: var(--branco);
+    color: var(--cinza-700);
+    border-color: var(--cinza-300);
+}
+
+.botao-secundario:hover {
+    background-color: var(--cinza-100);
+    border-color: var(--cinza-500);
+}
+
+/* foco visível para navegação por teclado */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid var(--laranja);
+    outline-offset: 2px;
+}
+
+.rodape {
+    background-color: var(--cinza-900);
+    color: var(--cinza-300);
+    border-top: 4px solid var(--laranja);
+    text-align: center;
+    padding: 1.25rem 0;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+    .cabecalho-conteudo {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu ul {
+        width: 100%;
+    }
+
+    .menu li {
+        flex: 1 1 auto;
+    }
+
+    .menu a {
+        text-align: center;
+    }
+}

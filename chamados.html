@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chamados | Central de Serviços de Rede</title>
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/global.css">
+    <link rel="stylesheet" href="./assets/css/chamados.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="container cabecalho-conteudo">
+            <div>
+                <h1>Central de Chamados</h1>
+                <p class="descricao">Registro e acompanhamento de solicitações técnicas</p>
+            </div>
+
+            <nav class="menu" aria-label="Navegação principal">
+                <ul>
+                    <li><a href="./index.html">Início</a></li>
+                    <li><a href="./chamados.html" aria-current="page">Chamados</a></li>
+                    <li><a href="./abrir-chamado.html">Abrir chamado</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section aria-labelledby="titulo-visao">
+            <h2 id="titulo-visao" class="titulo-secao">Visão geral</h2>
+            <div class="indicadores">
+                <article class="indicador indicador-aberto">
+                    <p>Abertos</p>
+                    <strong>3</strong>
+                </article>
+                <article class="indicador indicador-pendente">
+                    <p>Pendentes</p>
+                    <strong>2</strong>
+                </article>
+                <article class="indicador indicador-concluido">
+                    <p>Concluídos</p>
+                    <strong>1</strong>
+                </article>
+            </div>
+        </section>
+
+        <section class="pesquisa" aria-labelledby="titulo-pesquisa">
+            <h2 id="titulo-pesquisa">Pesquisar chamados</h2>
+
+            <form class="formulario-pesquisa" action="#" method="get">
+                <div class="linha-campos">
+                    <div class="campo campo-grande">
+                        <label for="palavra-chave">Palavra-chave</label>
+                        <input type="search" id="palavra-chave" name="palavra-chave"
+                               placeholder="Ex.: internet, antivírus">
+                    </div>
+
+                    <div class="campo">
+                        <label for="categoria">Categoria</label>
+                        <select id="categoria" name="categoria">
+                            <option value="">Todas</option>
+                            <option value="configuracao">Configuração de redes</option>
+                            <option value="suporte">Suporte básico</option>
+                            <option value="seguranca">Segurança</option>
+                            <option value="monitoramento">Monitoramento</option>
+                        </select>
+                    </div>
+
+                    <div class="campo">
+                        <label for="prioridade">Prioridade</label>
+                        <select id="prioridade" name="prioridade">
+                            <option value="">Todas</option>
+                            <option value="baixa">Baixa</option>
+                            <option value="media">Média</option>
+                            <option value="alta">Alta</option>
+                        </select>
+                    </div>
+
+                    <div class="campo">
+                        <label for="status">Status</label>
+                        <select id="status" name="status">
+                            <option value="">Todos</option>
+                            <option value="aberto">Aberto</option>
+                            <option value="pendente">Pendente</option>
+                            <option value="concluido">Concluído</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="linha-campos">
+                    <div class="campo">
+                        <label for="data-inicial">Data inicial</label>
+                        <input type="date" id="data-inicial" name="data-inicial">
+                    </div>
+
+                    <div class="campo">
+                        <label for="data-final">Data final</label>
+                        <input type="date" id="data-final" name="data-final">
+                    </div>
+
+                    <div class="campo">
+                        <label for="horario">Horário</label>
+                        <input type="time" id="horario" name="horario">
+                    </div>
+                </div>
+
+                <div class="acoes-pesquisa">
+                    <button type="submit" class="botao">Pesquisar</button>
+                    <button type="reset" class="botao botao-secundario">Limpar filtros</button>
+                </div>
+            </form>
+        </section>
+
+        <section aria-labelledby="titulo-listagem">
+            <div class="cabecalho-listagem">
+                <div>
+                    <h2 id="titulo-listagem">Chamados encontrados</h2>
+                    <p>Solicitações cadastradas na Central de Serviços.</p>
+                </div>
+                <a class="botao" href="./abrir-chamado.html">Abrir novo chamado</a>
+            </div>
+
+            <div class="lista-chamados">
+                <article class="chamado chamado-aberto">
+                    <div class="chamado-info">
+                        <p class="numero">Chamado #1001</p>
+                        <h3>Laboratório sem acesso à internet</h3>
+                        <p class="detalhes">
+                            Rede • Prioridade alta • Maria da Silva •
+                            <time datetime="2026-09-28T08:30">28/09/2026 às 08:30</time>
+                        </p>
+                    </div>
+                    <span class="status status-aberto">● Aberto</span>
+                </article>
+
+                <article class="chamado chamado-pendente">
+                    <div class="chamado-info">
+                        <p class="numero">Chamado #1002</p>
+                        <h3>Atualização do antivírus</h3>
+                        <p class="detalhes">
+                            Segurança • Prioridade média • João Pereira •
+                            <time datetime="2026-09-28T10:15">28/09/2026 às 10:15</time>
+                        </p>
+                    </div>
+                    <span class="status status-pendente">◐ Pendente</span>
+                </article>
+
+                <article class="chamado chamado-concluido">
+                    <div class="chamado-info">
+                        <p class="numero">Chamado #1003</p>
+                        <h3>Configuração de Wi-Fi na biblioteca</h3>
+                        <p class="detalhes">
+                            Configuração de redes • Prioridade média • Ana Souza •
+                            <time datetime="2026-09-29T14:00">29/09/2026 às 14:00</time>
+                        </p>
+                    </div>
+                    <span class="status status-concluido">✓ Concluído</span>
+                </article>
+
+                <article class="chamado chamado-aberto">
+                    <div class="chamado-info">
+                        <p class="numero">Chamado #1004</p>
+                        <h3>Impressora da secretaria não imprime</h3>
+                        <p class="detalhes">
+                            Suporte básico • Prioridade baixa • Carlos Lima •
+                            <time datetime="2026-09-30T09:20">30/09/2026 às 09:20</time>
+                        </p>
+                    </div>
+                    <span class="status status-aberto">● Aberto</span>
+                </article>
+
+                <article class="chamado chamado-pendente">
+                    <div class="chamado-info">
+                        <p class="numero">Chamado #1005</p>
+                        <h3>Lentidão no servidor de arquivos</h3>
+                        <p class="detalhes">
+                            Monitoramento • Prioridade alta • Fernanda Costa •
+                            <time datetime="2026-10-01T11:45">01/10/2026 às 11:45</time>
+                        </p>
+                    </div>
+                    <span class="status status-pendente">◐ Pendente</span>
+                </article>
+
+                <article class="chamado chamado-aberto">
+                    <div class="chamado-info">
+                        <p class="numero">Chamado #1006</p>
+                        <h3>Bloqueio de acesso a sistema acadêmico</h3>
+                        <p class="detalhes">
+                            Segurança • Prioridade alta • Paulo Ramos •
+                            <time datetime="2026-10-02T07:50">02/10/2026 às 07:50</time>
+                        </p>
+                    </div>
+                    <span class="status status-aberto">● Aberto</span>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <div class="container">
+            <p>Desenvolvimento Web I • Tecnologia em Redes de Computadores</p>
+        </div>
+    </footer>
+</body>
+</html>
